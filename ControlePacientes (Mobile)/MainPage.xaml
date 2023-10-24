@@ -1,0 +1,75 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlePacientes__Mobile_.MainPage"
+             BackgroundColor="#152232">
+
+    <StackLayout HorizontalOptions="CenterAndExpand">
+        <Label Text="Controle Pacientes"    TextColor="White"   HorizontalTextAlignment="Center"    FontSize="36"/>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="ID:"               TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryID" Text="{Binding BoundValue}" Keyboard="Numeric" TextChanged="onlyNumeric" Placeholder="" TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label 
+                Text="Nome:"             TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryName"       Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Data:"             TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryDate" Text="{Binding BoundValue}" Keyboard="Numeric" TextChanged="OnEntryDateTextChanged" Placeholder="dd/mm/yyyy" TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Hospital:"         TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryHospital" Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Chegada:"          TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryArrive" Text="{Binding BoundValue}" Keyboard="Numeric" TextChanged="OnEntryArriveTextChanged" Placeholder="hh:mm"           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Medicamento:"      TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryMedicine" Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="PréQuimio:"        TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryBefore" Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="DuranteQuimio:"    TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryDuring" Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="PósQuimio:"        TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryAfter" Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Observações:"      TextColor="White"   HorizontalTextAlignment="End"       FontSize="20"   VerticalOptions="Center"/>
+            <Entry x:Name="entryObs" Placeholder=""           TextColor="#ffffff" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <StackLayout Orientation="Vertical">
+                <Button Text="Atualizar"    Clicked="Update_Clicked"    BackgroundColor="#253c58"   TextColor="#ffffff" WidthRequest="100"  HeightRequest="40"/>
+                <Button Text="Deletar"      Clicked="Delete_Clicked"    BackgroundColor="#253c58"   TextColor="#ffffff" WidthRequest="100"  HeightRequest="40"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical">
+                <Button Text="Adicionar"    Clicked="Add_Clicked"       BackgroundColor="#253c58"   TextColor="#ffffff" WidthRequest="100"  HeightRequest="40"/>
+                <Button Text="Selecionar"   Clicked="Select_Clicked"    BackgroundColor="#253c58"   TextColor="#ffffff" WidthRequest="100"  HeightRequest="40"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Limpar"       Clicked="Clean_Clicked"     BackgroundColor="#253c58"   TextColor="#ffffff" WidthRequest="100"  HeightRequest="40"/>
+            </StackLayout>
+        </StackLayout>
+        <Button Text="Ajuda" Clicked="Help_Clicked" BackgroundColor="#253c58"   TextColor="#ffffff" WidthRequest="100"  HeightRequest="40"/>
+    </StackLayout>
+</ContentPage>
